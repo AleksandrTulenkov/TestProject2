@@ -51,7 +51,7 @@ def main():
     """Realization of main function."""
     params = process_str(parse_args())
     if params is not None:
-        label, output = process_str(params)
+        label, output = params
         print(label, output)
 
 
