@@ -1,9 +1,9 @@
 """Command-line parsing program."""
 import argparse
 
-UPPERCASE_LABEL = 'Uppercased text:'
-REVERSE_LABEL = 'Reversed text:'
-UPPERCASE_AND_REVERSE_LABEL = 'Uppercase and reverse text:'
+_UPPERCASE_LABEL = 'Uppercased text:'
+_REVERSE_LABEL = 'Reversed text:'
+_UPPERCASE_AND_REVERSE_LABEL = 'Uppercase and reverse text:'
 
 
 def reverse_str(input_string):
@@ -36,22 +36,22 @@ def process_str(args):
     """Output process function."""
     if args.reverse and args.uppercase:
         output = reverse_str(uppercase_str(args.text))
-        return UPPERCASE_AND_REVERSE_LABEL, output
+        return _UPPERCASE_AND_REVERSE_LABEL, output
     elif args.reverse:
         output = reverse_str(args.text)
-        return REVERSE_LABEL, output
+        return _REVERSE_LABEL, output
     elif args.uppercase:
         output = uppercase_str(args.text)
-        return UPPERCASE_LABEL, output
+        return _UPPERCASE_LABEL, output
     else:
         return None
 
 
 def main():
     """Realization of main function."""
-    args = parse_args()
-    if process_str(args) is not None:
-        label, output = process_str(args)
+    params = process_str(parse_args())
+    if params is not None:
+        label, output = process_str(params)
         print(label, output)
 
 

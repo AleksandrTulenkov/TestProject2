@@ -1,1 +1,1 @@
-import reverse_uppercase
+from module import reverse_uppercase
