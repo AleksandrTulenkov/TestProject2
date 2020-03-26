@@ -1,7 +1,7 @@
 # Boot camp test programming
 ============================
 
-Simple parsing command lines and change test program.
+Simple parsing command lines and change text program.
 
 
 INSTALLATION
