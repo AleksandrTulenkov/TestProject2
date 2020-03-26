@@ -1,1 +1,1 @@
-from module import reverse_uppercase
+from boot_camp import reverse_uppercase
